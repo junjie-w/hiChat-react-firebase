@@ -10,6 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </p>
 <br>
 <hr>
+
 ### Follow the steps below to have your own:
 
 #### 1: Clone this repo using this command
