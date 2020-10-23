@@ -3,7 +3,12 @@
 =======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## hiChat is a simple clone of Whatsapp:) Follow the steps below to have your own:
+## hiChat is a simple clone of Whatsapp:) 
+
+<img src="/public/images/Capture.PNG" width="800px" height="auto">
+<br>
+
+### Follow the steps below to have your own:
 
 #### 1: Clone this repo using this command
 `https://github.com/junjie-w/hiChat-react.git`
