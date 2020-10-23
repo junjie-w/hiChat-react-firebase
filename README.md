@@ -26,7 +26,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### 4: Replace firebase config data inside `firebase.js` with your own firebase config data.
 
-#### 5: Run `npm start` in your terminal & Ta-da! Go to localhost:3000 and play around with your own whatsApp clone:)
+#### 5: Replace ` "default": "your_project_name"` inside `.firebaserc` file with your own project name and save.
+
+#### 6: Run `npm start` in your terminal & Ta-da! Go to localhost:3000 and play around with your own whatsApp clone:)
 
 <br>
 <hr>
