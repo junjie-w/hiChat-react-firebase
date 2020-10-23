@@ -18,8 +18,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### 5: Run `npm start` in your terminal & tada! go to localhost:3000 and play around with your own whatsapp clone:)
 
-
-## Available Scripts
+<br>
+<hr>
 
 In the project directory, you can run:
 
