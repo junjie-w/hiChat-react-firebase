@@ -3,6 +3,22 @@
 =======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## hiChat is a simple clone of Whatsapp:) Follow the steps below to have your own:
+
+#### 1: Clone this repo using this command
+`https://github.com/junjie-w/hiChat-react.git`
+
+#### 2: Enter 
+`cd hiChat-react`
+
+#### 3: Enter 
+`npm install`
+
+#### 4: Replace firebase config data inside `firebase.js` with your own firebase config data.
+
+#### 5: Run `npm start` in your terminal & tada! go to localhost:3000 and play around with your own whatsapp clone:)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
