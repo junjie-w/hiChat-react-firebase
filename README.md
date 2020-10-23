@@ -2,7 +2,7 @@
 =======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## hiChat is a simple clone of Whatsapp:) 
+## hiChat is a simple clone of WhatsApp:) 
 
 <p align="center">
 <img src="/public/images/Capture 1.PNG" width="780px" height="auto">
