@@ -6,10 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## hiChat is a simple clone of Whatsapp:) 
 
 <p align="center">
-<img src="/public/images/Capture.PNG" width="750px" height="auto">
+<img src="/public/images/Capture.PNG" width="780px" height="auto">
 </p>
 <br>
-
+<hr>
 ### Follow the steps below to have your own:
 
 #### 1: Clone this repo using this command
