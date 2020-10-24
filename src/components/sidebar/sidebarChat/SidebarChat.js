@@ -38,7 +38,7 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="sidebarChat__info">
           <h2>{name}</h2>
-          <p>{messages[0]?.name} {": "} {messages[0]?.message}</p>
+          <p>{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message}</p>
         </div>
       </div>
     </Link >
