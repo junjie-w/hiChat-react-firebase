@@ -1,3 +1,9 @@
+.row::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
 .app {
   display: grid;
   place-items: center;
@@ -13,3 +19,11 @@
   width: 90vw;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
 }
+
+/*@media (max-width: 600px) {
+  .app_body {
+    height: 100vh;
+    margin: 0 !important;
+    width: 100vw;
+  }
+}*/

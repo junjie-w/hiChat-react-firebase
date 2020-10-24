@@ -7,6 +7,7 @@
 .chat__header {
   padding: 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid lightgray;
 }
@@ -35,6 +36,7 @@
   flex: 1;
   /*background-image: url('https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25');*/
   background-image: url('/images/background-img.jpg');
+  background-size: 100% auto;
   background-repeat: repeat;
   background-position: center;
   padding: 30px;
@@ -95,4 +97,14 @@
 .chat__footer > .MuiSvgIcon-root {
   padding: 10px;
   color: gray;
+}
+
+@media (max-width: 750px) {
+  .chat__headerHidden {
+    display: none;
+  }
+
+  .chat__headerInfo > p {
+    display: none;
+  }
 }

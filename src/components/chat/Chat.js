@@ -62,7 +62,7 @@ export const Chat = () => {
             )}
           </div>
         ) : (
-            <div className="chat__headerInfo">
+            <div className="chat__headerInfo  chat__headerHidden">
               <h3>Pick a room and happy chatting:)</h3>
               <p></p>
             </div>
