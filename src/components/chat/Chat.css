@@ -99,7 +99,7 @@
   color: gray;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .chat__headerHidden {
     display: none;
   }
