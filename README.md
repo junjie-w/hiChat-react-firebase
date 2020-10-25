@@ -10,6 +10,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <p align="center">
 <img src="/public/images/Capture 2.PNG" width="780px" height="auto">
 </p>
+<p align="center">
+<img src="/public/images/Capture 3.PNG" width="780px" height="auto">
+</p>
 <br>
 <hr>
 
