@@ -1,8 +1,9 @@
-import { Avatar } from '@material-ui/core';
+import { Avatar, IconButton } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import db from '../../../firebase';
-import './SidebarChat.css'
+import './SidebarChat.css';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 
 export const SidebarChat = ({ id, name, addNewChat }) => {
   const [seed, setSeed] = useState('')

@@ -16,6 +16,7 @@ a {
 
 .sidebarChat__info {
   margin-left: 15px;
+  flex: 1;
 }
 
 .sidebarChat__info > h2 {
