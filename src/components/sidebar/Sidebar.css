@@ -7,14 +7,17 @@
 .sidebar__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
+  padding-left: 23.5px;
   border-right: 1px solid lightgray;
 }
 
 .sidebar__headerRight {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: space-around;
   min-width: 10vw;
 }
 

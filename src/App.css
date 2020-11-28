@@ -2,13 +2,19 @@
   display: grid;
   place-items: center;
   background-color: #dadbd3;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.appWithBackground {
+  background-image: url('/images/background-img.jpg');
 }
 
 .app__body {
   display: flex;
   background-color: #ededed;
-  margin-top: -50px;
+  /*margin-top: -50px;*/
+  margin-top: -30px;
   height: 90vh;
   width: 90vw;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);

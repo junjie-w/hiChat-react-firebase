@@ -1,9 +1,11 @@
 export const initialState = {
-  user: null,
+  user: "null",
+  //deletedRoomId: "",
 }
 
 export const actionTypes = {
   SET_USER: "SET_USER",
+  //SET_ROOM: "SET_ROOM",
 };
 
 const reducer = (state, action) => {
@@ -14,6 +16,11 @@ const reducer = (state, action) => {
         ...state,
         user: action.user,
       };
+    //case actionTypes.SET_ROOM:
+    //  return {
+    //    ...state,
+    //    deletedRoomId: action.deletedRoomId,
+    //  };
     default:
       return state;
   }

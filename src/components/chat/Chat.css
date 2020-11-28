@@ -37,6 +37,7 @@
   /*background-image: url('https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25');*/
   background-image: url('/images/background-img.jpg');
   background-size: 100% auto;
+  /*background-size: cover;*/
   background-repeat: repeat;
   background-position: center;
   padding: 30px;
@@ -97,6 +98,18 @@
 .chat__footer > .MuiSvgIcon-root {
   padding: 10px;
   color: gray;
+}
+
+.chat__emojiPicker {
+  /*position: absolute;
+  bottom: 100px;*/
+}
+
+.emoji-picker-react {
+  width: 100% !important;
+  height: 17.5rem !important;
+  /*padding-bottom: 1rem;*/
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 700px) {

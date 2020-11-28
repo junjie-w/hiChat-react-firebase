@@ -1,4 +1,13 @@
+.sidebarChatWithButton {
+  display: flex;
+}
+
+/*.sidebarChatWithButton:hover {
+  background-color: #ebebeb;
+}*/
+
 .sidebarChat {
+  flex: 1;
   display: flex;
   padding: 20px;
   cursor: pointer;
@@ -22,4 +31,24 @@ a {
 .sidebarChat__info > h2 {
   font-size: 16px;
   margin-bottom: 8px;
+}
+
+.chatRoom__deleteButton {
+  display: none;
+  justify-self: flex-end;
+  /*align-self: center;*/
+  align-self: flex-end;
+  /*margin-top: 20px;*/
+  margin-right: 0.35rem;
+  margin-left: 0.25rem;
+}
+
+.deleteButton.MuiIconButton-root {
+  color: lightgray;
+  height: 0.8rem;
+  width: 0.8rem;
+  /*background-color: rgb(247, 247, 247);*/
+}
+.sidebarChatWithButton:hover .chatRoom__deleteButton {
+  display: inline-block;
 }

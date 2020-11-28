@@ -2,14 +2,14 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBQHfsQkulMp024c4wHsPWgOZeeRSBGXhY",
-  authDomain: "hichat-react-96310.firebaseapp.com",
-  databaseURL: "https://hichat-react-96310.firebaseio.com",
-  projectId: "hichat-react-96310",
-  storageBucket: "hichat-react-96310.appspot.com",
-  messagingSenderId: "835393066059",
-  appId: "1:835393066059:web:eaadebc6a0df8d389de9ce",
-  measurementId: "G-Y0QX7C33CT"
+  apiKey: "AIzaSyCyza_5Q3ir7ZYHJYvwzQJYLFCCcZragRY",
+  authDomain: "junjie-wu-hichat.firebaseapp.com",
+  databaseURL: "https://junjie-wu-hichat.firebaseio.com",
+  projectId: "junjie-wu-hichat",
+  storageBucket: "junjie-wu-hichat.appspot.com",
+  messagingSenderId: "140399585639",
+  appId: "1:140399585639:web:a04ee552b7c369e1c867c2",
+  measurementId: "G-10RSWLND5B"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

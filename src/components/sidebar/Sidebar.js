@@ -8,6 +8,9 @@ import { SearchOutlined } from '@material-ui/icons';
 import { SidebarChat } from './sidebarChat/SidebarChat';
 import db from '../../firebase';
 import { useStateValue } from '../../StateProvider';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { auth } from 'firebase';
+import { actionTypes } from '../../Reducer';
 
 export const Sidebar = () => {
 
@@ -15,14 +18,27 @@ export const Sidebar = () => {
   const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
-    const unsubscribe = db.collection('rooms').onSnapshot(snapshot => (setRooms(snapshot.docs.map(doc => ({
+    const unsubscribe = db.collection('rooms').orderBy('timestamp', 'desc').onSnapshot(snapshot => (setRooms(snapshot.docs.map(doc => ({
       id: doc.id,
       data: doc.data(),
     })))));
     return () => {
       unsubscribe();
     }
+    //}, [deletedRoom])
   }, [])
+
+  const signOut = () => {
+    auth().signOut().then(() => {
+      console.log("signed out")
+      dispatch({
+        type: actionTypes.SET_USER,
+        user: null,
+      })
+    }).catch(error => {
+      console.log(error)
+    });
+  }
 
   return (
     <div className="sidebar">
@@ -30,12 +46,15 @@ export const Sidebar = () => {
       <div className="sidebar__header">
         <Avatar src={user?.photoURL} />
         <div className="sidebar__headerRight">
-          <IconButton>
+          <IconButton onClick={signOut}>
+            <ExitToAppIcon />
+          </IconButton>
+          {/*<IconButton>
             <DonutLargeIcon />
-          </IconButton>
-          <IconButton>
+          </IconButton>*/}
+          {/*<IconButton>
             <ChatIcon />
-          </IconButton>
+          </IconButton>*/}
           <IconButton>
             <MoreVertIcon />
           </IconButton>

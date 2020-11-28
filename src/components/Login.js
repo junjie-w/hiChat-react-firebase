@@ -28,7 +28,7 @@ export const Login = () => {
         <div className="login__text">
           <h1>Sign in to hiChat</h1>
         </div>
-        <Button type="submit" onClick={signIn} >Sign in with Google</Button>
+        <Button type="submit" onClick={signIn}>Sign in with Google</Button>
       </div>
     </div>
   )
