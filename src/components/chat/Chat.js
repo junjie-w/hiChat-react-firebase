@@ -1,4 +1,4 @@
-import { Avatar, IconButton } from '@material-ui/core';
+import { Avatar, Button, IconButton } from '@material-ui/core';
 import { AttachFile, MoreVert, SearchOutlined } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 import './Chat.css';
@@ -9,6 +9,7 @@ import db from '../../firebase';
 import firebase from 'firebase';
 import { useStateValue } from '../../StateProvider';
 import Picker from 'emoji-picker-react';
+import axios from '../../axios';
 
 export const Chat = () => {
   const [input, setInput] = useState("");
@@ -35,7 +36,6 @@ export const Chat = () => {
     setInput(input + emojiObject.emoji)
     //console.log(emojiObject)
   };
-
 
   //const addEmoji = (e) => {
   //  let emoji = e.native;
@@ -67,20 +67,54 @@ export const Chat = () => {
     setInput("");
   }
 
+  //const emptyRoom = async () => {
+  //  console.log("clicked")
+  //db.collection("rooms").doc(roomId).collection("messages").delete().then(() => {
+  //  //window.location = "/";
+  //  console.log("Document successfully deleted!");
+  //}).catch(function (error) {
+  //  console.error("Error removing document: ", error);
+  //});
+  //const ref = db.collection("rooms").doc(roomId).collection("messages")
+  //db.collection("rooms").doc(roomId).collection("messages").onSnapshot(snapshot => {
+  //  snapshot.docs.forEach(doc => {
+  //    ref.doc().delete()
+  //      .catch(error => {
+  //        console.log(error)
+  //      })
+  //  })
+  //})
+  //await axios.delete(`/room/${roomId}`)
+  //  .then(response => console.log(response))
+  //  .catch(error => console.log("error", error));
+  //const dbRefObject = db.collection("rooms").doc(roomId).collection("messages");
+  //console.log("000", dbRefObject)
+  //dbRefObject('value', (snapshot) => {
+  //  snapshot.forEach((childSnapshot) => {
+  //    let nodeKey = childSnapshot.key;
+  //    firebase.database().ref("messages").child(nodeKey).remove();
+  //  })
+  //})
+  //}
+
+  //const getMessageId = db.collection('rooms').doc(roomId).collection('messages')
+  //useEffect(() => {
+  //  const unsubscribe = db.collection('rooms').orderBy('timestamp', 'desc').onSnapshot(snapshot => (setRooms(snapshot.docs.map(doc => ({
+  //    id: doc.id,
+  //    data: doc.data(),
+  //  })))));
+  //  return () => {
+  //    unsubscribe();
+  //  }
+  //  //}, [deletedRoom])
+  //}, [])
+
   const emptyRoom = () => {
-    //db.collection("rooms").doc(roomId).collection("messages").delete().then(() => {
-    //  //window.location = "/";
-    //  console.log("Document successfully deleted!");
-    //}).catch(function (error) {
-    //  console.error("Error removing document: ", error);
-    //});
-    const ref = db.collection("rooms").doc(roomId).collection("messages")
-    db.collection("rooms").doc(roomId).collection("messages").onSnapshot(snapshot => {
-      snapshot.docs.forEach(doc => {
-        ref.doc().delete()
-          .catch(error => {
-            console.log(error)
-          })
+    console.log(roomId);
+    const ref = db.collection('rooms').doc(roomId).collection('messages');
+    ref.onSnapshot((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        ref.doc(doc.id).delete()
       })
     })
   }
@@ -108,13 +142,18 @@ export const Chat = () => {
           )}
 
         <div className="chat__headerRight">
-          <IconButton>
+
+          <Button variant="contained" onClick={() => emptyRoom()} className="emptyRoomButton">
+            {/*Message overflow. Empty this room*/}
+            Empty this room
+          </Button>
+          {/*<IconButton>
             <SearchOutlined />
           </IconButton>
           <IconButton>
             <AttachFile />
-          </IconButton>
-          <IconButton onclick={emptyRoom}>
+          </IconButton>*/}
+          <IconButton>
             <MoreVert />
           </IconButton>
         </div>

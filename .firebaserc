@@ -1,5 +1,23 @@
 {
   "projects": {
-    "default": "hichat-react-96310"
+    "default": "junjie-wu-hichat",
+    "staging": "junjie-wu-hichat",
+    "development": "junjie-wu-hichat"
+  },
+  "targets": {
+    "hichat-react-96310": {
+      "hosting": {
+        "hiChat": [
+          "junjie-wu-hichat"
+        ]
+      }
+    },
+    "junjie-wu-hichat": {
+      "hosting": {
+        "hiChat": [
+          "junjie-wu-hichat"
+        ]
+      }
+    }
   }
 }

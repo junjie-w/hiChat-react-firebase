@@ -81,7 +81,7 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="sidebarChat__info">
           <h2>{name}</h2>
-          <p>{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 45)}{messages[0]?.message.length > 45 && "..."}</p>
+          <p>{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
         </div>
       </Link >
       {id !== roomId && (<div className="chatRoom__deleteButton">
