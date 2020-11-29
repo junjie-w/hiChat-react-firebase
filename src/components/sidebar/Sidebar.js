@@ -55,7 +55,7 @@ export const Sidebar = () => {
           <IconButton onClick={signOut}>
             <ExitToAppIcon />
           </IconButton>
-          {showDonut && <IconButton onClick={toggleDonutButton}>
+          {showDonut && <IconButton onClick={toggleDonutButton} className="sidebar__header__donutLarge">
             <DonutLargeIcon />
           </IconButton>}
           {/*<IconButton>
@@ -70,7 +70,7 @@ export const Sidebar = () => {
       <div className="sidebar__search">
         <div className="sidebar__searchContainer">
           <SearchOutlined />
-          <input placeholder="Search..." type="text" />
+          <input placeholder="Search..." type="text" className="inputPlaceholder" />
         </div>
       </div>
 

@@ -10,6 +10,7 @@ import firebase from 'firebase';
 import { useStateValue } from '../../StateProvider';
 import Picker from 'emoji-picker-react';
 import axios from '../../axios';
+import { useMediaQuery } from 'react-responsive'
 
 export const Chat = () => {
   const [input, setInput] = useState("");
@@ -125,6 +126,8 @@ export const Chat = () => {
     })
   }
 
+  const max600 = useMediaQuery({ query: '(max-width: 600px)' });
+
   return (
     <div className="chat">
 
@@ -142,15 +145,20 @@ export const Chat = () => {
           </div>
         ) : (
             <div className="chat__headerInfo  chat__headerHidden">
-              <h3>Pick a room and happy chatting:)</h3>
-              <p></p>
+              <h3>Pick a room ✨ Happy chatting:)</h3>
+              {/*<p></p>*/}
             </div>
           )}
 
         <div className="chat__headerRight">
           {showEmptyButton && <Button variant="contained" onClick={() => emptyRoom()} className="emptyRoomButton">
             {/*Message overflow. Empty this room*/}
-            Empty this room
+            {!max600 ? "Empty this room" :
+              (<div>
+                <p>Empty</p>
+                <p>Room</p>
+              </div>)
+            }
           </Button>}
           {!showEmptyButton && <IconButton onClick={toggleEmpty} className="searchButton">
             <SearchOutlined />
@@ -158,7 +166,7 @@ export const Chat = () => {
           {!showEmptyButton && <IconButton onClick={toggleEmpty} className="attachFileButton">
             <AttachFile />
           </IconButton>}
-          <IconButton onClick={toggleEmpty} className="moreVertButton">
+          <IconButton onClick={toggleEmpty} className="chat__headerRight__moreVertButton">
             <MoreVert />
           </IconButton>
         </div>
@@ -197,8 +205,8 @@ export const Chat = () => {
           <IconButton onClick={toggleEmojiPicker} >
             <InsertEmoticonIcon />
           </IconButton>
-          <form action="">
-            <input value={input} onChange={e => setInput(e.target.value)} placeholder="Type a message" type="text" />
+          <form action="" className="chat__footer__form">
+            <input value={input} onChange={e => setInput(e.target.value)} placeholder="Type a message" type="text" className="chat__footer__input" />
             <button onClick={sendMessage} type="submit">Send a message</button>
           </form>
           <IconButton>

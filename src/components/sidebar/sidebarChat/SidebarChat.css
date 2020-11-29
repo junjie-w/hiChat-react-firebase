@@ -69,7 +69,8 @@ a {
   .sidebarChat__createTitle {
     font-size: 1rem;
   }
-  .MuiAvatar-img {
+  /*.MuiAvatar-img {*/
+  .MuiAvatar-circle {
     width: 1.85rem !important;
     height: 1.85rem !important;
   }
@@ -83,7 +84,7 @@ a {
 
 @media (max-width: 600px) {
   a.sidebarChat {
-    padding: 0.8rem !important;
+    padding: 1.2rem !important;
   }
   .sidebarChat__info {
     margin-left: 0.5rem !important;
@@ -91,9 +92,11 @@ a {
   .sidebarChat__info__roomName {
     font-size: 0.7rem !important;
   }
-  .MuiAvatar-img {
+  /*.MuiAvatar-img {*/
+  .MuiAvatar-circle {
     width: 1.65rem !important;
     height: 1.65rem !important;
+    margin-right: 0.35rem;
   }
   .sidebarChat__info__lastMsg {
     font-size: 0.7rem !important;
@@ -106,7 +109,7 @@ a {
 
 @media (max-width: 540px) {
   a.sidebarChat {
-    padding: 0.565rem !important;
+    padding: 1rem !important;
   }
   .sidebarChat__info {
     margin-left: 0.3rem !important;
@@ -120,11 +123,87 @@ a {
 }
 
 @media (max-width: 480px) {
-  .sidebarChat__createTitle {
-    font-size: 0.75rem;
+  .sidebarChat__createText {
+    /*padding: 0.8rem;*/
   }
-  .MuiAvatar-img {
-    width: 1.5rem !important;
-    height: 1.5rem !important;
+  a.sidebarChat {
+    /*padding: 0.35rem 0.475rem 0.35rem 0.35rem !important;*/
+    /*padding: 0.8rem !important;*/
+  }
+  .sidebarChat__createTitle {
+    /*font-size: 0.6rem;*/
+  }
+  /*.MuiAvatar-img {*/
+  .MuiAvatar-circle {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+  }
+  .sidebarChat__info__lastMsg {
+    /*font-size: 0.55rem !important;*/
+    display: none;
+  }
+  .sidebarChat__info__roomName {
+    font-size: 0.65rem !important;
+    margin-bottom: 0 !important;
+  }
+  .sidebarChat__info {
+    display: flex;
+    align-items: center;
+  }
+  .deleteButton.MuiIconButton-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  a.sidebarChat {
+    padding-left: 0.4rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+@media (max-width: 357px) {
+  .sidebarChat__createTitle {
+    font-size: 0.7rem;
+  }
+  a.sidebarChat {
+    padding: 1.15rem 0.2rem 1rem 0.5rem !important;
+    /*padding-right: 0.3rem !important;*/
+  }
+  .chatRoom__deleteButton {
+    margin-right: 0.1rem;
+    margin-left: 0.1rem;
+  }
+}
+
+@media (max-width: 345px) {
+  .sidebarChat__createText {
+    padding: 1rem 0.75rem 1rem 0.8rem !important;
+  }
+  a.sidebarChat {
+    padding: 1.15rem 0.1rem 1rem 0.5rem !important;
+  }
+}
+
+@media (max-width: 330px) {
+  .MuiAvatar-circle {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+  }
+  a.sidebarChat {
+    padding: 1.15rem 0 1rem 0.35rem !important;
+  }
+  .sidebarChat__info {
+    margin-left: 0.15rem !important;
+  }
+  .sidebarChat__info__roomName {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (max-width: 300px) {
+  a.sidebarChat {
+    padding: 1.15rem 0 1rem 0.235rem !important;
   }
 }

@@ -63,8 +63,12 @@
   .sidebar {
     width: 38% !important;
   }
-  .sidebar__header__moreVert {
+  .sidebar__header__moreVert,
+  .sidebar__header__donutLarge {
     display: none !important;
+  }
+  .inputPlaceholder {
+    width: 7rem;
   }
 }
 
@@ -72,7 +76,62 @@
   .sidebar {
     width: 35% !important;
   }
+  .inputPlaceholder {
+    /*margin-left: 2px !important;*/
+    margin-left: 0 !important;
+  }
+  .inputPlaceholder {
+    width: 5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .sidebar__header {
+    justify-content: space-between;
+    padding: 20px 10px 20px 20px;
+  }
+  .sidebar {
+    width: 29% !important;
+  }
+  .sidebar__searchContainer > .MuiSvgIcon-root {
+    width: 1rem !important;
+    height: 1rem !important;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  /*.inputPlaceholder {
+    display: none;
+  }*/
+}
+
+@media (max-width: 460px) {
+  .inputPlaceholder {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .sidebar__header {
+    justify-content: space-between;
+    padding: 20px 5px 20px 15px;
+  }
+  .inputPlaceholder {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .inputPlaceholder {
+    width: 2.35rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .sidebar__header {
+    justify-content: space-between;
+    padding: 20px 3px 20px 12px;
+  }
+  .inputPlaceholder {
+    width: 1.9rem;
+  }
 }

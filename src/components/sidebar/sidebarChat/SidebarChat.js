@@ -5,8 +5,9 @@ import db from '../../../firebase';
 import './SidebarChat.css';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import firebase from 'firebase';
-import { useStateValue } from '../../../StateProvider';
-import { actionTypes } from '../../../Reducer';
+//import { useStateValue } from '../../../StateProvider';
+//import { actionTypes } from '../../../Reducer';
+import { useMediaQuery } from 'react-responsive';
 
 export const SidebarChat = ({ id, name, addNewChat }) => {
   //const [info, dispatch] = useStateValue();
@@ -65,6 +66,10 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
     setTimeout(() => { setGray(false) }, 850);
   }
 
+  const max600 = useMediaQuery({ query: '(max-width: 600px)' });
+  //const min601 = useMediaQuery({ query: '(min-width: 601px)' });
+  //const max999 = useMediaQuery({ query: '(max-width: 999px)' });
+
   return !addNewChat ? (
     //<Link to={`/rooms/${id}`}>
     //  <div className="sidebarChat">
@@ -83,11 +88,20 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
 
     //<div className="sidebarChat">
     <div className={`sidebarChatWithButton ${gray && "chatRoom__gray"}`}>
-      <Link to={`/rooms/${id}`} className="sidebarChat">
+      <Link to={`/rooms/${id}`} className="sidebarChat sidebarChat__">
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} className="sidebarChat__avatar" />
         <div className="sidebarChat__info" onClick={toggleGray}>
           <h2 className="sidebarChat__info__roomName">{name}</h2>
-          <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
+          {/*<p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>*/}
+          {/*{min1000 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 45)}{messages[0]?.message.length > 45 && "..."}</p>}
+          {max999 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>}*/}
+          {/*{min601 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>}*/}
+          {max600
+            ?
+            <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 10)}{messages[0]?.message.length > 10 && "..."}</p>
+            :
+            <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
+          }
         </div>
       </Link >
       {/*{id !== roomId && (<div className="chatRoom__deleteButton">
@@ -108,7 +122,7 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
       </div>*/}
     </div>
   ) : (
-      <div onClick={createChat} className="sidebarChat">
+      <div onClick={createChat} className="sidebarChat sidebarChat__createText">
         <h2 className="sidebarChat__createTitle">Create New Chat</h2>
       </div>
     )
