@@ -45,6 +45,7 @@
   border-radius: 100px !important;
   font-size: 0.85rem !important;
   padding: 0.75rem !important;
+  margin-left: 0.85rem !important;
 }
 
 .chat__body {
@@ -52,6 +53,7 @@
   /*background-image: url('https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25');*/
   background-image: url('/images/background-img.jpg');
   background-size: 100% auto;
+  /*background-size: auto;*/
   /*background-size: cover;*/
   background-repeat: repeat;
   background-position: center;
@@ -127,12 +129,97 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 750px) {
+  .MuiButtonBase-root.emptyRoomButton {
+    height: 2rem !important;
+    align-self: center !important;
+  }
+  .headerInfo__lastSeen {
+    font-size: 0.8rem !important;
+  }
+  .chat__headerInfo {
+    padding-left: 0.75rem;
+  }
+  .chat__headerHidden {
+    font-size: 0.85rem;
+  }
+  .emptyRoomButton > .MuiButton-label {
+    font-size: 0.65rem;
+  }
+}
+
 @media (max-width: 700px) {
+  .chat__headerHidden {
+    /*display: none;*/
+    font-size: 0.75rem;
+  }
+  .chat__headerInfo > p {
+    display: none;
+  }
+  .emptyRoomButton > .MuiButton-label {
+    font-size: 0.58rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .searchButton,
+  .attachFileButton {
+    display: none !important;
+  }
+  /*.moreVertButton {
+    justify-self: flex-end !important;
+  }*/
+  .chat__headerRight {
+    justify-content: flex-end;
+  }
+
+  .emptyRoomButton {
+    width: 1.5rem;
+  }
+  .MuiButtonBase-root.emptyRoomButton {
+    height: 1.5rem !important;
+    align-self: center !important;
+  }
+  .emptyRoomButton > .MuiButton-label {
+    font-size: 0.45rem;
+  }
+}
+
+@media (max-width: 625px) {
+  .chat {
+    flex: 0.85 !important;
+  }
+  .chat__headerInfo__roomTitle {
+    font-size: 1rem;
+  }
+  .chat__messageText {
+    font-size: 0.9rem;
+  }
+  .chat__headerInfo {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (max-width: 540px) {
   .chat__headerHidden {
     display: none;
   }
+  .chat__headerInfo__roomTitle {
+    font-size: 0.85rem;
+  }
+  .chat__messageText {
+    font-size: 0.85rem;
+  }
+}
 
-  .chat__headerInfo > p {
-    display: none;
+@media (max-width: 480px) {
+  .chat__body {
+    padding: 25px;
+  }
+  .chat__messageText {
+    font-size: 0.7rem;
+  }
+  .chat__timestamp {
+    font-size: 0.45rem;
   }
 }

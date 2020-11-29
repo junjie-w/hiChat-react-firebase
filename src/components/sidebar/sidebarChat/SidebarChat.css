@@ -33,6 +33,9 @@ a {
   margin-bottom: 8px;
 }
 
+.sidebarChat__avatar.MuiAvatar-root {
+}
+
 .chatRoom__deleteButton {
   display: none;
   justify-self: flex-end;
@@ -49,6 +52,79 @@ a {
   width: 0.8rem;
   /*background-color: rgb(247, 247, 247);*/
 }
+
 .sidebarChatWithButton:hover .chatRoom__deleteButton {
   display: inline-block;
+}
+
+/*.chatRoom__gray {
+  background-color: #ebebeb;
+}*/
+
+.chatRoom__deleteButton__gray {
+  display: none !important;
+}
+
+@media (max-width: 621px) {
+  .sidebarChat__createTitle {
+    font-size: 1rem;
+  }
+  .MuiAvatar-img {
+    width: 1.85rem !important;
+    height: 1.85rem !important;
+  }
+  .sidebarChat__info__roomName {
+    font-size: 0.875rem !important;
+  }
+  .sidebarChat__info__lastMsg {
+    font-size: 0.785rem;
+  }
+}
+
+@media (max-width: 600px) {
+  a.sidebarChat {
+    padding: 0.8rem !important;
+  }
+  .sidebarChat__info {
+    margin-left: 0.5rem !important;
+  }
+  .sidebarChat__info__roomName {
+    font-size: 0.7rem !important;
+  }
+  .MuiAvatar-img {
+    width: 1.65rem !important;
+    height: 1.65rem !important;
+  }
+  .sidebarChat__info__lastMsg {
+    font-size: 0.7rem !important;
+  }
+  .deleteButton.MuiIconButton-root {
+    /*height: 0.65rem !important;
+    width: 0.65rem !important;*/
+  }
+}
+
+@media (max-width: 540px) {
+  a.sidebarChat {
+    padding: 0.565rem !important;
+  }
+  .sidebarChat__info {
+    margin-left: 0.3rem !important;
+  }
+  .sidebarChat__createTitle {
+    font-size: 0.85rem;
+  }
+  .sidebarChat__info__lastMsg {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebarChat__createTitle {
+    font-size: 0.75rem;
+  }
+  .MuiAvatar-img {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
 }

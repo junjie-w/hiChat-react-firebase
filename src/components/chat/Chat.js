@@ -109,6 +109,12 @@ export const Chat = () => {
   //  //}, [deletedRoom])
   //}, [])
 
+  const [showEmptyButton, setShowEmptyButton] = useState(false)
+
+  const toggleEmpty = () => {
+    setShowEmptyButton(!showEmptyButton)
+  }
+
   const emptyRoom = () => {
     console.log(roomId);
     const ref = db.collection('rooms').doc(roomId).collection('messages');
@@ -126,9 +132,9 @@ export const Chat = () => {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         {roomId ? (
           <div className="chat__headerInfo">
-            <h3>{roomName}</h3>
+            <h3 className="chat__headerInfo__roomTitle">{roomName}</h3>
             {messages.length >= 1 && (
-              <p>last seen {" "}
+              <p className="headerInfo__lastSeen">last seen {" "}
                 {new Date(
                   messages[messages.length - 1]?.timestamp?.toDate()).toLocaleString()}
               </p>
@@ -142,18 +148,17 @@ export const Chat = () => {
           )}
 
         <div className="chat__headerRight">
-
-          <Button variant="contained" onClick={() => emptyRoom()} className="emptyRoomButton">
+          {showEmptyButton && <Button variant="contained" onClick={() => emptyRoom()} className="emptyRoomButton">
             {/*Message overflow. Empty this room*/}
             Empty this room
-          </Button>
-          {/*<IconButton>
+          </Button>}
+          {!showEmptyButton && <IconButton onClick={toggleEmpty} className="searchButton">
             <SearchOutlined />
-          </IconButton>
-          <IconButton>
+          </IconButton>}
+          {!showEmptyButton && <IconButton onClick={toggleEmpty} className="attachFileButton">
             <AttachFile />
-          </IconButton>*/}
-          <IconButton>
+          </IconButton>}
+          <IconButton onClick={toggleEmpty} className="moreVertButton">
             <MoreVert />
           </IconButton>
         </div>
@@ -163,7 +168,8 @@ export const Chat = () => {
         {roomId && messages.map(message => (
           <p className={`chat__message ${message.name === user.displayName && "chat__receiver"}`}>
             <span className="chat__name">{message.name}</span>
-            {message.message}
+            {/*{message.message}*/}
+            <span className="chat__messageText">{message.message}</span>
             <span className="chat__timestamp">{new Date(message.timestamp?.toDate()).toLocaleString()}</span>
           </p>
         ))}

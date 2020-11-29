@@ -59,6 +59,12 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
     history.replace("/");
   }
 
+  const [gray, setGray] = useState(false);
+  const toggleGray = () => {
+    setGray(true);
+    setTimeout(() => { setGray(false) }, 850);
+  }
+
   return !addNewChat ? (
     //<Link to={`/rooms/${id}`}>
     //  <div className="sidebarChat">
@@ -76,19 +82,25 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
     //</Link>
 
     //<div className="sidebarChat">
-    <div className="sidebarChatWithButton">
+    <div className={`sidebarChatWithButton ${gray && "chatRoom__gray"}`}>
       <Link to={`/rooms/${id}`} className="sidebarChat">
-        <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
-        <div className="sidebarChat__info">
-          <h2>{name}</h2>
-          <p>{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
+        <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} className="sidebarChat__avatar" />
+        <div className="sidebarChat__info" onClick={toggleGray}>
+          <h2 className="sidebarChat__info__roomName">{name}</h2>
+          <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
         </div>
       </Link >
-      {id !== roomId && (<div className="chatRoom__deleteButton">
+      {/*{id !== roomId && (<div className="chatRoom__deleteButton">
         <IconButton className="deleteButton" onClick={() => deleteRoom(id)}>
           <DeleteOutlineIcon />
         </IconButton>
-      </div>)}
+      </div>)}*/}
+      <div className={`chatRoom__deleteButton ${gray && "chatRoom__deleteButton__gray"}`}>
+        {/*<div className="chatRoom__deleteButton">*/}
+        <IconButton className="deleteButton" onClick={() => deleteRoom(id)}>
+          <DeleteOutlineIcon />
+        </IconButton>
+      </div>
       {/*<div className="chatRoom__deleteButton">
         <IconButton className="deleteButton" onClick={() => deleteRoom(id)}>
           <DeleteOutlineIcon />
@@ -97,7 +109,7 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
     </div>
   ) : (
       <div onClick={createChat} className="sidebarChat">
-        <h2>Create New Chat</h2>
+        <h2 className="sidebarChat__createTitle">Create New Chat</h2>
       </div>
     )
 }

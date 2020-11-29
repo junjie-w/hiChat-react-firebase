@@ -40,6 +40,12 @@ export const Sidebar = () => {
     });
   }
 
+  const [showDonut, setShowDonut] = useState(false)
+
+  const toggleDonutButton = () => {
+    setShowDonut(!showDonut)
+  }
+
   return (
     <div className="sidebar">
 
@@ -49,13 +55,13 @@ export const Sidebar = () => {
           <IconButton onClick={signOut}>
             <ExitToAppIcon />
           </IconButton>
-          {/*<IconButton>
+          {showDonut && <IconButton onClick={toggleDonutButton}>
             <DonutLargeIcon />
-          </IconButton>*/}
+          </IconButton>}
           {/*<IconButton>
             <ChatIcon />
           </IconButton>*/}
-          <IconButton>
+          <IconButton onClick={toggleDonutButton} className="sidebar__header__moreVert">
             <MoreVertIcon />
           </IconButton>
         </div>

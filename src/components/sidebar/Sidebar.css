@@ -58,3 +58,21 @@
   background-color: white;
   overflow: scroll;
 }
+
+@media (max-width: 621px) {
+  .sidebar {
+    width: 38% !important;
+  }
+  .sidebar__header__moreVert {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 35% !important;
+  }
+}
+
+@media (max-width: 480px) {
+}

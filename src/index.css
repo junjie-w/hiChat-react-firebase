@@ -13,8 +13,10 @@ body {
 
 html,
 body {
-  min-height: 100vh;
-  min-width: 100vw;
+  /*min-height: fit-content;
+  min-width: fit-content;*/
+  /*height: fit-content;
+  width: fit-content;*/
 }
 
 code {
