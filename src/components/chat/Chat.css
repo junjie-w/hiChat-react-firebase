@@ -5,12 +5,15 @@
 }
 
 .chat__header {
-  padding: 24px 20px 16.5px 20px;
+  padding: 23px 20px 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid lightgray;
   /*background-color: #d2e0e6;*/
+  /*position: -webkit-sticky;
+  position: sticky;
+  top: 0;*/
 }
 
 .chat__headerInfo {
@@ -265,29 +268,12 @@
     /*max-width: 90rem;*/
     max-width: 71%;
   }
-  .chat__body {
-    /*padding: 21px;*/
-  }
-  .chat__message {
-    /*padding: 7px;*/
-  }
-  .chat__messageText {
-    /*font-size: 0.6rem;*/
-  }
-  .chat__timestamp {
-    /*font-size: 0.4rem;*/
-  }
-  .footerAndEmojiPicker {
-    /*max-width: 71%;*/
-  }
-  /*.chat__footer__form {
-    max-width: 80% !important;
-  }*/
   .chat__headerHidden {
     padding-left: 4px;
   }
   .chat__footer__input {
-    max-width: 30vw !important;
+    /*max-width: 30vw !important;*/
+    max-width: 33.5vw !important;
   }
   .chat__headerRight__moreVertButton {
     padding-left: 5px !important;
@@ -332,6 +318,9 @@
   }
   .chat__headerInfo__roomTitle {
     font-size: 0.776rem;
+  }
+  .chat__footer__input {
+    max-width: 29.15vw !important;
   }
 }
 

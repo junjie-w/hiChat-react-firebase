@@ -125,6 +125,13 @@ export const Chat = () => {
       })
     })
   }
+  //const emptyRoom = () => {
+  //  console.log(roomId);
+  //  const ref = db.collection('rooms').doc(roomId).collection('messages');
+  //  ref.onSnapshot((snapshot) => {
+  //    snapshot.docs.map(doc => ref.doc(doc.id).delete())
+  //  })
+  //}
 
   const max600 = useMediaQuery({ query: '(max-width: 600px)' });
 

@@ -8,10 +8,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21.5px 20px 20px 23.85px;
+  padding: 23px 20px 20px 23.85px;
   /*padding-left: 23.5px;*/
   border-right: 1px solid lightgray;
   /*background-color: #d2e0e6;*/
+  /*position: -webkit-sticky;
+  position: sticky;
+  top: 0;*/
 }
 
 .sidebar__headerRight {
