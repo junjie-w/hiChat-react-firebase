@@ -8,6 +8,7 @@ import firebase from 'firebase';
 //import { useStateValue } from '../../../StateProvider';
 //import { actionTypes } from '../../../Reducer';
 import { useMediaQuery } from 'react-responsive';
+//import SidebarChat_infoLastMsg from './SidebarChat_infoLastMsg';
 
 export const SidebarChat = ({ id, name, addNewChat }) => {
   //const [info, dispatch] = useStateValue();
@@ -67,6 +68,9 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
   }
 
   const max600 = useMediaQuery({ query: '(max-width: 600px)' });
+  //const max480 = useMediaQuery({ query: '(max-width: 480px)' });
+  //const max300 = useMediaQuery({ query: '(max-width: 300px)' });
+
   //const min601 = useMediaQuery({ query: '(min-width: 601px)' });
   //const max999 = useMediaQuery({ query: '(max-width: 999px)' });
 
@@ -92,13 +96,28 @@ export const SidebarChat = ({ id, name, addNewChat }) => {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} className="sidebarChat__avatar" />
         <div className="sidebarChat__info" onClick={toggleGray}>
           <h2 className="sidebarChat__info__roomName">{name}</h2>
+          {/*<SidebarChat_infoLastMsg messages={messages} />*/}
           {/*<p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>*/}
           {/*{min1000 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 45)}{messages[0]?.message.length > 45 && "..."}</p>}
           {max999 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>}*/}
           {/*{min601 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>}*/}
+          {/*{max480 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 10)}{messages[0]?.message.length > 10 && "..."}</p>
+          }
+          {max600 && <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
+          }*/}
+          {/*{() => {
+            if (max600) {
+              return <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 10)}{messages[0]?.message.length > 10 && "..."}</p>
+            } else if (max480) {
+              return <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
+            } else if (max300) {
+              return <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 5)}{messages[0]?.message.length > 5 && "..."}</p>
+            }
+          }
+          }*/}
           {max600
             ?
-            <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 10)}{messages[0]?.message.length > 10 && "..."}</p>
+            <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 8)}{messages[0]?.message.length > 8 && "..."}</p>
             :
             <p className="sidebarChat__info__lastMsg">{messages[0]?.name} {messages.length >= 1 && ": "} {messages[0]?.message.substr(0, 27)}{messages[0]?.message.length > 27 && "..."}</p>
           }

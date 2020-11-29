@@ -5,11 +5,12 @@
 }
 
 .chat__header {
-  padding: 20px;
+  padding: 24px 20px 16.5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid lightgray;
+  /*background-color: #d2e0e6;*/
 }
 
 .chat__headerInfo {
@@ -52,6 +53,7 @@
   flex: 1;
   /*background-image: url('https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25');*/
   background-image: url('/images/background-img.jpg');
+  /*background-image: url('/images/image.jpg');*/
   background-size: 100% auto;
   /*background-size: auto;*/
   /*background-size: cover;*/

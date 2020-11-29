@@ -22,12 +22,13 @@
 
 @media (max-width: 480px) {
   .app {
-    place-items: start;
+    align-items: start;
+    justify-items: center;
   }
   .app__body {
-    height: 95vh;
-    width: 99vw;
-    margin-top: 1.15px;
+    height: 93.5vh;
+    width: 98.35vw;
+    margin-top: 1px;
     margin-bottom: 1.15px;
   }
 }

@@ -138,17 +138,19 @@ a {
     width: 1.3rem !important;
     height: 1.3rem !important;
   }
+  .sidebarChat__info {
+    /*display: flex;
+    align-items: center;*/
+  }
   .sidebarChat__info__lastMsg {
-    /*font-size: 0.55rem !important;*/
-    display: none;
+    font-size: 0.55rem !important;
+    margin-top: 0.3rem;
+    margin-right: 0.15rem;
+    /*display: none;*/
   }
   .sidebarChat__info__roomName {
     font-size: 0.65rem !important;
     margin-bottom: 0 !important;
-  }
-  .sidebarChat__info {
-    display: flex;
-    align-items: center;
   }
   .deleteButton.MuiIconButton-root {
     padding-left: 0 !important;
@@ -183,6 +185,12 @@ a {
   }
   a.sidebarChat {
     padding: 1.15rem 0.1rem 1rem 0.5rem !important;
+  }
+  .sidebarChat__info__lastMsg {
+    font-size: 0.5rem !important;
+    margin-top: 0.3rem;
+    margin-right: 0.15rem;
+    /*display: none;*/
   }
 }
 
