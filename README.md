@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## hiChat is a simple clone of WhatsApp:) 
 
 <p align="center">
+<img src="/public/images/hichat---.png" width="780px" height="auto">
+</p>
+<!--<p align="center">
 <img src="/public/images/Capture 1.PNG" width="780px" height="auto">
 </p>
 <p align="center">
@@ -12,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </p>
 <p align="center">
 <img src="/public/images/Capture 3.PNG" width="780px" height="auto">
-</p>
+</p>-->
 <br>
 <hr>
 
