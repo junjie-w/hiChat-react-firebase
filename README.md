@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## hiChat is a simple clone of WhatsApp:) 
-### It's built with React.js and was deployed on Firebase. 
+#### It's built with React.js and was deployed on Firebase. 
 
 <br>
 <p align="center">
